@@ -62,4 +62,12 @@ A simple data access object which saves the authentication token to local storag
 
 * * *
 
+### TODO
+
+- Notifications
+- Rangr Icon
+- UI improvement
+
+* * *
+
 Copyright (c) 2012 Nitin Dhar. See [MIT-LICENSE](https://github.com/nitindhar7/rangr/blob/master/MIT-LICENSE) for details.
