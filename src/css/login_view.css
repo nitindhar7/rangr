@@ -4,6 +4,7 @@
 	display: block;
 	font-family: Helvetica, Tahoma;
 	font-size: 10px;
+	color: #333;
 }
 
 #login {
@@ -29,6 +30,20 @@
     font-weight: bold;
 }
 
-#login .hide {
+#logout {
+	width: 300px;
+	height: 30px;
 	display: none;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#logout:hover {
+	color: #000;
+}
+
+#message {
+    width: 300px;
+    height: 30px;
+    display: none;
 }

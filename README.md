@@ -10,7 +10,7 @@ soft, non-intrusive manner. Install Rangr from the [Chrome Web Store](https://ch
 
 ### ARCHITECTURE
 
-1. **Login View:** dialog box where user enters their credentials
+1. **Login Controller/View:** dialog box where user enters their credentials
 2. **Auth Controller:** contact Forrst.com to obtain the auth token
 3. **Base Controller:** background page as a controller
 4. **Notification View:** pop-ups that open when a notification is detected
@@ -20,7 +20,7 @@ soft, non-intrusive manner. Install Rangr from the [Chrome Web Store](https://ch
 
 ### DETAILS
 
-##### Login View
+##### Login Controller/View
 
 When installed, a Rangr icon will appear to the right of the browsers address bar. Clicking this icon opens up 
 the login view with a form. The user will enter their credentials here and press submit. On submit, the credentials

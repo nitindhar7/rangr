@@ -10,7 +10,7 @@ function RangrStorageDao() {
 	    localStorage.setItem(RANGR_ACCESS_TOKEN_KEY, accessToken);
 	};
 	
-	this.removeToken = function(accessToken) {
+	this.removeToken = function() {
 	    localStorage.removeItem(RANGR_ACCESS_TOKEN_KEY);
 	};
 	
