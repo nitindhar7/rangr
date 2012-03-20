@@ -1,12 +1,13 @@
 {
   "name": "rangr",
   "version": "0.1.0",
-  "description": "Forrst Notifications for Google Chrome!",
+  "description": "Rangr is a Google Chrome extension that pulls a users notification data from Forrst.com and presents it in the browser in a soft, non-intrusive manner",
   "browser_action": {
 	"default_icon": "icon.png",
-    "default_title": "rangr",
-    "default_popup": "src/popup.html"
+    "default_title": "Rangr - Notifications for Forrst",
+    "default_popup": "src/login_view.html"
   },
+  "background_page": "src/core.html",
   "default_icon": "icon.png",
   "permissions": ["https://forrst.com/api/v2/"]
 }

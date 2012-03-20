@@ -30,7 +30,8 @@ will be passed on to the *Auth Controller*
 
 The auth controller manages a users activity session. When a user logs in their credentials are collected here and a call
 to Forrst.com is made. The response to this call contains the users authentication token (if successful), which is stored
-to local storage via the *Rangr Storage DAO*
+to local storage via the *Rangr Storage DAO*. Log out functionality is also resident in this module. On log out, a users
+access token is deleted from storage.
 
 ##### Base Controller
 
@@ -53,4 +54,12 @@ A simple data access object which saves the authentication token to local storag
 
 * * *
 
-Copyright (c) 2012 Nitin Dhar. See MIT-LICENSE for details.
+### UP NEXT
+
+- Options page with notification refresh frequency
+- Instant reply to notification
+- Tweet notification
+
+* * *
+
+Copyright (c) 2012 Nitin Dhar. See [MIT-LICENSE](https://github.com/nitindhar7/rangr/blob/master/MIT-LICENSE) for details.
