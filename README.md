@@ -1,5 +1,5 @@
-RANGR
-=====
+RANGR - Notifications for Forrst [Rangr Logo](http://bit.ly/GA6sWK)
+===================================================================
 
 ### OVERVIEW
 
