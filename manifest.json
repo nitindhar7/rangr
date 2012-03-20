@@ -1,0 +1,12 @@
+{
+  "name": "rangr",
+  "version": "0.1.0",
+  "description": "Forrst Notifications for Google Chrome!",
+  "browser_action": {
+	"default_icon": "icon.png",
+    "default_title": "rangr",
+    "default_popup": "src/popup.html"
+  },
+  "default_icon": "icon.png",
+  "permissions": ["https://forrst.com/api/v2/"]
+}
