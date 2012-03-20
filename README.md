@@ -1,4 +1,4 @@
-RANGR - Notifications for Forrst ![Rangr Logo](http://bit.ly/GA6sWK)
+![Rangr Logo](http://bit.ly/GA6sWK) RANGR - Notifications for Forrst 
 ====================================================================
 
 ### OVERVIEW
