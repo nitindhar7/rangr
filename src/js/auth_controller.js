@@ -1,6 +1,10 @@
-var storageDao = new RangrStorageDao();
-
 chrome.extension.onRequest.addListener(requestHandler);
+
+var MSG_LOGIN_SUCCESS = "Successfully logged in!";
+var MSG_LOGIN_FAILURE = "Invalid email/username or password";
+var MSG_LOGOUT_SUCCESS = "Successfully logged out!";
+
+var storageDao = new RangrStorageDao();
 
 function requestHandler(request, sender, sendResponse) {
 
@@ -8,28 +12,24 @@ function requestHandler(request, sender, sendResponse) {
 		
 		// TODO: ajax spinner
 		
-		console.debug("AuthController: " + request.email_or_username);
-		console.debug("AuthController: " + request.password);
-		
 		$.ajax({
 			data: {email_or_username: request.email_or_username, password: request.password},
 			dataType: "json",
 			type: "post",
 			url: "https://forrst.com/api/v2/users/auth",
 			success: function(response) {
-				console.debug(response)
 				storageDao.saveToken(response.resp.token);
-				sendResponse({msg: "Successfully logged in!", error: null});
+				sendResponse({msg: MSG_LOGIN_SUCCESS, error: null});
 			},
 			error: function() {
-				sendResponse({msg: null, error: "Invalid email/username or password"});
+				sendResponse({msg: null, error: MSG_LOGIN_FAILURE});
 			}
 		});
 	}
 	
 	else if(request.type == "logout") {
 		storageDao.removeToken();
-		sendResponse({msg: "Successfully logged out!", error: null});
+		sendResponse({msg: MSG_LOGOUT_SUCCESS, error: null});
 	}
 
 }

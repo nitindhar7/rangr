@@ -30,7 +30,7 @@ will be passed on to the *Auth Controller*
 
 The auth controller manages a users activity session. When a user logs in their credentials are collected here and a call
 to Forrst.com is made. The response to this call contains the users authentication token (if successful), which is stored
-to local storage via the *Rangr Storage DAO*. Log out functionality is also resident in this module. On log out, a users
+to local storage via the *Rangr Storage DAO*. Logout functionality is also resident in this module. On logout, a users
 access token is deleted from storage.
 
 ##### Base Controller
@@ -41,6 +41,13 @@ will be displayed in an individual view when 2 or less notifications are present
 and only the # of notifications will be displayed. When such a notification box is clicked the current tab is redirected to
 the Forrst.com notifications page. On the other hand, when no notifications are present a dialog box mentioning this will be presented
 only on startup.
+
+Example notification creation:
+
+```javascript
+var notification = new Notification(icon url, title, body).build();
+notification.show();
+```
 
 ##### Notification View
 
