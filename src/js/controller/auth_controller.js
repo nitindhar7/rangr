@@ -6,6 +6,8 @@ var MSG_LOGOUT_SUCCESS = "Successfully logged out!";
 
 var storageDao = new RangrStorageDao();
 
+// TODO: session timing?
+
 function requestHandler(request, sender, sendResponse) {
 
 	if(request.type == "login") {

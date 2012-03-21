@@ -2,6 +2,8 @@ function RangrStorageDao() {
 	
 	var RANGR_ACCESS_TOKEN_KEY = "rangr_access_token";
 	
+	// TODO: maybe cache token in memory
+	
 	this.getToken = function() {
 	    return localStorage.getItem(RANGR_ACCESS_TOKEN_KEY);
 	};
