@@ -1,27 +1,31 @@
-function Notification(iconUrl, title, body) {
-	
-	var NOTIFICATION_TIMEOUT = 5000;
+//chrome.tabs.create({url: 'http://forrst.com' + this.notificationUrl});
 
-	this.notification = null;
+function Notification(notificationUrl, iconUrl, title, body) {
+	
+	this.notificationUrl = notificationUrl;
     this.iconUrl = iconUrl;
     this.title = title;
     this.body = body;
     
-    this.build = function() {
-    	return this.notification = window.webkitNotifications.createNotification(
-			this.iconUrl,
-			this.title,
-			this.body
-  	    );
-	};
-	
-	this.show = function() {
-		this.notification.show();
-		// TODO: hide notification after set time using: setTimeout(this.hide(), NOTIFICATION_TIMEOUT);
-	}
-		
-	this.hide = function() {
-		this.notification.cancel();
-	}
+    this.push = push;
+    this.hide = hide;
 
+    this.notification = window.webkitNotifications.createNotification(
+		this.iconUrl,
+		this.title,
+		this.body
+    );
+    
+    this.notification.ondisplay = onPostDisplay(this);
+}
+
+function onPostDisplay(obj) {
+}
+
+function push() {
+	this.notification.show();
+}
+
+function hide() {
+	this.notification.cancel();
 }

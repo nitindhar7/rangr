@@ -1,13 +1,25 @@
-actionSetup();
+chrome.extension.onRequest.addListener(requestHandler);
 
-function actionSetup() {
+var notifications = [];
+
+function requestHandler(request, sender, sendResponse) {
+	
+	if(request.type == "auth") {
+		actionNotify();
+	}
+	
+}
+
+// TODO: refactor me
+function actionNotify() {
 
 	var NOTIFICATIONS_GROUP_THRESHOLD = 2;
 	
 	var storageDao = new RangrStorageDao();
 	var token = storageDao.getToken();
-	var notifications = [];
 	var notificationsCount = 0;
+	
+	notifications = [];
 
 	if(token != null) {
 		$.ajax({
@@ -16,7 +28,8 @@ function actionSetup() {
 			type: "get",
 			url: "https://forrst.com/api/v2/notifications",
 			success: function(response) {
-				// TODO: what happens where there is no notification?
+				// TODO: what happens when there is no notification?
+				// TODO: refactor me
 				for(item in response.resp.items) {
 					for(notification in response.resp.items[item]) {
 						notifications.push(response.resp.items[item][notification]);
@@ -27,34 +40,39 @@ function actionSetup() {
 				notificationsCount = 2;
 
 				if(notificationsCount == 0 || notificationsCount > NOTIFICATIONS_GROUP_THRESHOLD) {
+					// TODO: refactor me - same call, but with different 'type=group'
 					var notification = new Notification('images/ajax-loader.gif', '', notificationsCount + ' notifications found').build();
 					notification.show();
 				}
 				else {
-					var i = 0;
-					for(key in notifications) {
-						i++; if (i > 2) break;
-						
-						// TODO: show default forrst photo if notification doesnt contain user's thumbnail url
-						var notification = new Notification(notifications[key].data.photo, 
-															notifications[key].object_type + ' ' + notifications[key].behavior, 
-															' @' + notifications[key].data.actor
-															).build();
-						notification.onclick = function() {
-							chrome.tabs.create({url: 'http://forrst.com' + notifications[key].data.object_url})
-							notification.cancel();
-						};
-						notification.show();
-						console.log(notifications[key]);
+					for(var i = 0; i < notificationsCount; i++) {
+//								   'post_url=' + notifications[key].data.object_url;
+
+						webkitNotifications.createHTMLNotification('notification_view.html?type=single&i=' + i).show();
+						break;
 					}
 				}
 			},
 			error: function() {
+				// TODO: handle me
 			}
 		});
 	}
 	else {
+		// FIXME: handle more gracefully
 		alert("not logged in!");
 	}
 	
+}
+
+// TODO: document me
+// TODO: test me
+function writeToLog(data) {
+	console.log(data);
+}
+
+// TODO: document me
+// TODO: test me
+function getNotification(i) {
+	return notifications[i];
 }

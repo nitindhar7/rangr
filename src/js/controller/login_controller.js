@@ -45,6 +45,9 @@ function actionLogin() {
 		else {
 			$("#logout").show();
 			$("#logout").bind("click", actionLogout);
+			chrome.extension.sendRequest({type: "auth"}, function(response) {
+				
+			});
 			// TODO: change UI
 		}
 	});

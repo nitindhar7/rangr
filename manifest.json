@@ -7,7 +7,7 @@
 		"default_title": "Rangr - Notifications for Forrst",
 		"default_popup": "src/login_view.html"
 	},
-	"background_page": "src/core.html",
+	"background_page": "src/base_controller.html",
 	"default_icon": "icon.png",
 	"permissions": [
 	    "notifications",
