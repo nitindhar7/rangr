@@ -63,18 +63,21 @@ A simple data access object which saves the authentication token to local storag
 
 ### UP NEXT
 
-- Notification auto-hide
 - Options page with notification refresh frequency
 - Instant reply to notification
 - Tweet notification
 - Option to load latest post every XX seconds
+- Reply button
 
 * * *
 
 ### TODO
 
-- Notifications
 - Rangr Icon
+
+    - Browser action icon
+    - Popup Icon
+
 - UI improvement
 
 * * *

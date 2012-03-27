@@ -4,11 +4,10 @@
 	display: block;
 	font-family: Helvetica, Tahoma;
 	font-size: 10px;
-	color: #333;
+	color: #555;
 }
 
 #notification {
-	padding: 10px;
 	width: 300px;
 	height: 45px;
 	clear: both;
@@ -21,26 +20,65 @@
 }
 
 #content {
-	margin-left: 10px;
-	width: 225px;
+	width: 255px;
 	height: 45px;
 	float: left;
-	cursor: pointer;
-}
-
-#content:hover {
-	background: #EEE;
 }
 
 #title {
-	width: 225px;
-	height: 20px;
-	line-height: 20px;
-	font-weight: bold;
+	padding: 0 5px;
+	width: 245px;
+	height: 24px;
+	line-height: 24px;
 	text-transform: capitalize;
+	border-bottom: 1px solid #CCC;
+	-webkit-box-shadow: 0 1px 2px #DDD;
+	clear: both;
+}
+
+#actor_name {
+	float: left;
+	font-weight: bold;
+    cursor: pointer;
+}
+
+#actor_name:hover {
+	text-decoration: underline;
+}
+
+#behavior,
+#date {
+	float: right;
+	margin-left: 5px;
+}
+
+#date {
+	font-style: italic;
 }
 
 #body {
-	width: 225px;
-    height: 25px;
+	width: 255px;
+    height: 20px;
+}
+
+#view,
+#dismiss {
+	color: #4f85c9;
+	width: 125px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+    float: left;
+    font-weight: bold;
+}
+
+#dismiss {
+	margin-left: 5px;
+}
+
+#view:hover,
+#dismiss:hover {
+	color: #2961a7;
+	text-decoration: underline;
 }

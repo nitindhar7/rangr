@@ -2,6 +2,8 @@ chrome.extension.onRequest.addListener(requestHandler);
 
 var notifications = [];
 
+setInterval(alert("interval"), 5000);
+
 function requestHandler(request, sender, sendResponse) {
 	
 	if(request.type == "auth") {
@@ -36,20 +38,13 @@ function actionNotify() {
 						notificationsCount++;
 					}
 				}
-				
-				notificationsCount = 2;
 
 				if(notificationsCount == 0 || notificationsCount > NOTIFICATIONS_GROUP_THRESHOLD) {
-					// TODO: refactor me - same call, but with different 'type=group'
-					var notification = new Notification('images/ajax-loader.gif', '', notificationsCount + ' notifications found').build();
-					notification.show();
+					webkitNotifications.createHTMLNotification('notification_view.html?type=group&i=' + i + '&count=' + notificationsCount).show();
 				}
 				else {
 					for(var i = 0; i < notificationsCount; i++) {
-//								   'post_url=' + notifications[key].data.object_url;
-
-						webkitNotifications.createHTMLNotification('notification_view.html?type=single&i=' + i).show();
-						break;
+						webkitNotifications.createHTMLNotification('notification_view.html?type=single&i=' + i + '&count=' + notificationsCount).show();
 					}
 				}
 			},

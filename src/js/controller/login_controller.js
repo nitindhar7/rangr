@@ -30,6 +30,7 @@ function actionLogout() {
 	});
 }
 
+// FIXME: change UI if user already logged in
 function actionLogin() {
 	$("#message").hide();
 	
@@ -48,7 +49,7 @@ function actionLogin() {
 			chrome.extension.sendRequest({type: "auth"}, function(response) {
 				
 			});
-			// TODO: change UI
+			window.close();
 		}
 	});
 }
