@@ -79,6 +79,7 @@ A simple data access object which saves the authentication token to local storag
     - Popup Icon
 
 - UI improvement
+- OOCSS for views
 
 * * *
 

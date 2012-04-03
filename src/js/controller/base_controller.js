@@ -2,8 +2,6 @@ chrome.extension.onRequest.addListener(requestHandler);
 
 var notifications = [];
 
-setInterval(alert("interval"), 5000);
-
 function requestHandler(request, sender, sendResponse) {
 	
 	if(request.type == "auth") {

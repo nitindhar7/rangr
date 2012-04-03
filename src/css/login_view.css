@@ -5,45 +5,181 @@
 	font-family: Helvetica, Tahoma;
 	font-size: 10px;
 	color: #333;
+	outline: none;
 }
 
 #login {
+	margin: 5px;
 	padding: 10px;
-	padding-bottom: 0;
-	width: 300px;
-	height: 150px;
+	width: 470px;
+	height: 270px;
+	background: #F5F5F5;
+	-webkit-border-radius: 3px;
 }
 
-#login .title {
-	margin-bottom: 10px;
-	width: 280px;
-	height: 30px;
-	line-height: 30px;
-	font-weight: bold;
+#nav {
+	width: 470px;
+    height: 70px;
+    clear: both;
 }
 
-#login .box {
-	margin-bottom: 10px;
-    width: 280px;
-    height: 30px;
-    line-height: 30px;
-    font-weight: bold;
+#nav-logo {
+	width: 150px;
+	height: 70px;
+	background: url(../images/rangr-popup-view-logo.png);
+	float: left;
 }
 
-#logout {
-	width: 300px;
-	height: 30px;
+#nav-spinner {
+	margin-top: 27px;
+	width: 16px;
+	height: 16px;
+	float: right;
+	background: url(../images/ajax-loader.gif);
 	display: none;
-	cursor: pointer;
+}
+
+#nav-buttons {
+    height: 70px;
+    float: right;
+}
+
+#nav-button-signup {
+	padding: 0 10px;
+    height: 70px;
+    line-height: 70px;
+    color: #6C6;
+    font-size: 14px;
+    text-shadow: white 1px 1px 0px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#nav-button-signup:hover {
+	color: #1C1;
 	text-decoration: underline;
 }
 
-#logout:hover {
-	color: #000;
+#content {
+	width: 470px;
+	height: 200px;
+}
+
+#byline {
+	margin-bottom: 10px;
+	margin-left: 20px;
+	width: 470px;
+    height: 15px;
+    line-height: 15px;
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: white 1px 1px 0px;
+}
+
+#login-form {
+	width: 470px;
+	height: 175px;
+}
+
+#login-form .title {
+	margin-bottom: 10px;
+	margin-left: 30px;
+	margin-right: 10px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	color: #666;
+	font-size: 12px;
+	text-align: right;
+	float: left;
+	clear: left;
+	text-shadow: white 1px 1px 0px;
+}
+
+#login-form .box {
+	margin-bottom: 10px;
+	margin-right: 80px;
+	padding: 5px;
+    width: 238px;
+    height: 28px;
+    line-height: 18px;
+    float: left;
+    font-size: 12px;
+    border: 1px solid #666;
+    -webkit-border-radius: 3px;
+    clear: right;
+}
+
+#login-form .check {
+	margin-left: 140px;
+	width: 25px;
+	height: 25px;
+	float: left;
+	clear: left;
+}
+
+#login-form .check-label {
+	margin-left: 5px;
+    width: 300px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #999;
+	float: left;
+    clear: right;
+    text-shadow: white 1px 1px 0px;
+}
+
+#login-form .note-label {
+    margin-left: 170px;
+    width: 40px;
+    height: 25px;
+    font-weight: bold;
+    color: #666;
+    float: left;
+    clear: left;
+    text-shadow: white 1px 1px 0px;
+}
+
+#login-form .note-content {
+    width: 260px;
+    height: 42px;
+    font-style: italic;
+    color: #999;
+    float: left;
+    clear: right;
+    text-shadow: white 1px 1px 0px;
+}
+
+#login-form .submit {
+	margin-left: 140px;
+	width: 58px;
+    height: 28px;
+    border: 1px solid #3C3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6C6), to(#3C3));
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    -webkit-box-shadow: 0 0 2px #333;
+    -webkit-border-radius: 3px;
+    float: left;
+    clear: left;
+    cursor: pointer;
+}
+
+#login-form .submit:hover {
+	-webkit-box-shadow: 0 0 30px #CFC;
 }
 
 #message {
-    width: 300px;
-    height: 30px;
-    display: none;
+	margin-left: 15px;
+	width: 240px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	color: #C00;
+	float: left;
+    clear: right;
+	text-shadow: white 1px 1px 0px;
 }

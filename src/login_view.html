@@ -6,13 +6,28 @@
   </head>
   <body>
     <div id="login">
-      <div class="title">Email or Username</div>
-      <input type="text" class="box"/>
-      <div class="title">Password</div>
-      <input type="password" class="box"/>
-      <input type="submit" value="Login" class="submit"/>
+      <div id="nav">
+        <div id="nav-logo"></div>
+        <div id="nav-spinner"></div>
+        <div id="nav-buttons">
+          <div id="nav-button-signup">Create an account</div>
+        </div>
+      </div>
+      <div id="content">
+        <div id="byline">Sign in to Rangr</div>
+        <div id="login-form">
+          <div class="title">Username</div>
+	      <input type="text" class="box"/>
+	      <div class="title">Password</div>
+	      <input type="password" class="box"/>
+	      <input type="checkbox" class="check"/>
+	      <div class="check-label">Remember me</div>
+	      <div class="note-label">NOTE:</div>
+	      <div class="note-content">Storing your passwords may allow others to access your Rangr account when using the browser</div>
+	      <input type="submit" value="Sign in" class="submit"/>
+	      <div id="message"></div>
+        </div>
+      </div>
     </div>
-    <div id="logout">Logout</div>
-    <div id="message"></div>
   </body>
 </html>

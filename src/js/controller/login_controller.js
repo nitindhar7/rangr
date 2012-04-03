@@ -32,7 +32,7 @@ function actionLogout() {
 
 // FIXME: change UI if user already logged in
 function actionLogin() {
-	$("#message").hide();
+	$("#nav-spinner").show();
 	
 	var data = {
 		type: "login",
@@ -41,11 +41,10 @@ function actionLogin() {
 	}
 	
 	chrome.extension.sendRequest(data, function(response) {
+		$("#nav-spinner").hide();
 		if(response.error != null)
 			showMessage(response.error);
 		else {
-			$("#logout").show();
-			$("#logout").bind("click", actionLogout);
 			chrome.extension.sendRequest({type: "auth"}, function(response) {
 				
 			});
