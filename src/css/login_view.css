@@ -26,8 +26,24 @@
 #nav-logo {
 	width: 150px;
 	height: 70px;
-	background: url(../images/rangr-popup-view-logo.png);
 	float: left;
+}
+
+#nav-logo-icon {
+	margin-top: 11px;
+    width: 48px;
+    height: 48px;
+    background: url(../images/logo-48.png);
+    float: left;
+}
+
+#nav-logo-text {
+	margin-top: 15px;
+	margin-left: 2px;
+    width: 100px;
+    height: 40px;
+    background: url(../images/logo-font-outage.png);
+    float: left;
 }
 
 #nav-spinner {

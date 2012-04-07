@@ -1,10 +1,13 @@
 $(document).ready(UISetup);
 
+var BASE_URI = "http://forrst.com";
+
 function UISetup() {
 	
 	// TODO: check if user logged in and show appropriate UI based on that
 	
 	$("#login .submit").live('click', actionLogin);
+	$("#nav-button-signup").live('click', actionSignup);
 	
 	UIFocusSetup();
 }
@@ -50,5 +53,11 @@ function actionLogin() {
 			});
 			window.close();
 		}
+	});
+}
+
+function actionSignup() {
+	chrome.tabs.create({
+		url: BASE_URI + "/signup"
 	});
 }
