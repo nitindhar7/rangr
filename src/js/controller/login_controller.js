@@ -1,19 +1,44 @@
 $(document).ready(UISetup);
 
 var BASE_URI = "http://forrst.com";
+var storageDao = new RangrStorageDao();
 
 function UISetup() {
-	
-	// TODO: check if user logged in and show appropriate UI based on that
-	
-	$("#login .submit").live('click', actionLogin);
-	$("#nav-button-signup").live('click', actionSignup);
-	
+	UIDisplaySetup();
 	UIFocusSetup();
+	UIBindingSetup();
+}
+
+function UIDisplaySetup() {
+	if(storageDao.hasToken()) {
+		$("#nav-button-logout").show();
+		$("#content").hide();
+		$("#login").css('height', '70px');
+	}
+	else {
+		$("#nav-button-signup").show();
+		$("#byline").show();
+		$("#login-form").show();
+	}
 }
 
 function UIFocusSetup() {
-	$("#login .box:first").focus();
+	if(storageDao.hasToken()) {
+	}
+	else {
+		$("#login .box:first").focus();
+	}
+}
+
+function UIBindingSetup() {
+	if(storageDao.hasToken()) {
+		$("#nav-button-logout").live('click', actionLogout);
+		actionTriggerNotify();
+	}
+	else {
+		$("#login .submit").live('click', actionLogin);
+		$("#nav-button-signup").live('click', actionSignup);
+	}
 }
 
 function showMessage(text) {
@@ -22,18 +47,23 @@ function showMessage(text) {
 }
 
 function actionLogout() {
-	var logout = { type: "logout" }
+	$("#nav-spinner").show();
+	
+	var logout = {
+		type: "logout"
+	}
+	
+	// TODO: close any open notification windows
+	
 	chrome.extension.sendRequest(logout, function(response) {
 		if(response.error != null)
 			showMessage(response.error);
 		else {
-			$("#logout").hide();
-			showMessage(response.msg);
+			window.close();
 		}
 	});
 }
 
-// FIXME: change UI if user already logged in
 function actionLogin() {
 	$("#nav-spinner").show();
 	
@@ -59,5 +89,15 @@ function actionLogin() {
 function actionSignup() {
 	chrome.tabs.create({
 		url: BASE_URI + "/signup"
+	});
+}
+
+function actionTriggerNotify() {
+	chrome.extension.sendRequest({type: "auth"}, function(response) {
+		if(response.error != null)
+			showMessage(response.error);
+		else {
+			window.close();
+		}
 	});
 }

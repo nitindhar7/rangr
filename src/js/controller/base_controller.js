@@ -1,6 +1,7 @@
 chrome.extension.onRequest.addListener(requestHandler);
 
 var notifications = [];
+var notificationsCount = 0;
 
 function requestHandler(request, sender, sendResponse) {
 	
@@ -17,9 +18,9 @@ function actionNotify() {
 	
 	var storageDao = new RangrStorageDao();
 	var token = storageDao.getToken();
-	var notificationsCount = 0;
 	
 	notifications = [];
+	notificationsCount = 0;
 
 	if(token != null) {
 		$.ajax({
@@ -68,4 +69,8 @@ function writeToLog(data) {
 // TODO: test me
 function getNotification(i) {
 	return notifications[i];
+}
+
+function getNotificationsCount() {
+	return notificationsCount;
 }

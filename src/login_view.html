@@ -1,8 +1,9 @@
 <html>
   <head>
-    <script src="js/lib/jquery.js"></script>
-    <script src="js/controller/login_controller.js"></script>
     <link rel="stylesheet" href="css/login_view.css" type="text/css">
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/model/rangr_storage_dao.js"></script>
+    <script src="js/controller/login_controller.js"></script>
   </head>
   <body>
     <div id="login">
@@ -13,7 +14,8 @@
         </div>
         <div id="nav-spinner"></div>
         <div id="nav-buttons">
-          <div id="nav-button-signup">Create an account</div>
+          <div id="nav-button-signup" class="nav-button">Create an account</div>
+          <div id="nav-button-logout" class="nav-button">Logout</div>
         </div>
       </div>
       <div id="content">

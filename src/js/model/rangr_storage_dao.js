@@ -16,4 +16,14 @@ function RangrStorageDao() {
 	    localStorage.removeItem(RANGR_ACCESS_TOKEN_KEY);
 	};
 	
+	this.hasToken = function() {
+		var token = localStorage.getItem(RANGR_ACCESS_TOKEN_KEY);
+		if(token == null) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+	
 }
