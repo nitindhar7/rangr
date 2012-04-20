@@ -12,7 +12,7 @@
 	margin: 5px;
 	padding: 10px;
 	width: 470px;
-	height: 270px;
+	height: 210px;
 	background: #F5F5F5;
 	-webkit-border-radius: 3px;
 }
@@ -79,7 +79,7 @@
 
 #content {
 	width: 470px;
-	height: 200px;
+	height: 140px;
 }
 
 #byline {
@@ -97,7 +97,7 @@
 
 #login-form {
 	width: 470px;
-	height: 175px;
+	height: 115px;
 	display: none;
 }
 
@@ -128,47 +128,6 @@
     border: 1px solid #666;
     -webkit-border-radius: 3px;
     clear: right;
-}
-
-#login-form .check {
-	margin-left: 140px;
-	width: 25px;
-	height: 25px;
-	float: left;
-	clear: left;
-}
-
-#login-form .check-label {
-	margin-left: 5px;
-    width: 300px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 12px;
-    color: #999;
-	float: left;
-    clear: right;
-    text-shadow: white 1px 1px 0px;
-}
-
-#login-form .note-label {
-    margin-left: 170px;
-    width: 40px;
-    height: 25px;
-    font-weight: bold;
-    color: #666;
-    float: left;
-    clear: left;
-    text-shadow: white 1px 1px 0px;
-}
-
-#login-form .note-content {
-    width: 260px;
-    height: 42px;
-    font-style: italic;
-    color: #999;
-    float: left;
-    clear: right;
-    text-shadow: white 1px 1px 0px;
 }
 
 #login-form .submit {

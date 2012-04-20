@@ -1,5 +1,7 @@
 chrome.extension.onRequest.addListener(requestHandler);
 
+var NOTIFICATION_TIMEOUT_MILLIS = 1000 * 60 * 15;
+
 var notifications = [];
 var notificationsCount = 0;
 
@@ -7,6 +9,7 @@ function requestHandler(request, sender, sendResponse) {
 	
 	if(request.type == "auth") {
 		actionNotify();
+		self.setInterval("actionNotify()", NOTIFICATION_TIMEOUT_MILLIS);
 	}
 	
 }
@@ -54,7 +57,7 @@ function actionNotify() {
 	}
 	else {
 		// FIXME: handle more gracefully
-		alert("not logged in!");
+		alert("You are not logged in!");
 	}
 	
 }
