@@ -68,6 +68,7 @@ A simple data access object which saves the authentication token to local storag
 - Tweet notification
 - Option to load latest post every XX seconds
 - Reply button
+- Number of notifications in Rangr browser icon
 
 * * *
 
