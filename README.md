@@ -77,6 +77,23 @@ A simple data access object which saves the authentication token to local storag
 - UI improvement
 - Remove white glow around "RANGR" logo text
 - OOCSS for views (maybe)
+- Media Assets:
+
+Screenshots
+1280w x 800h
+640w x 400h
+
+App Icon
+128w x 128h
+16w x 16h
+19w x 19h
+48w x 48h
+128w x 128h
+
+Promotional Images
+440w x 280h
+920w x 680h
+1400w x 560h
 
 * * *
 
