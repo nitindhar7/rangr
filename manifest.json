@@ -14,6 +14,7 @@
 		"default_popup": "src/login_view.html"
 	},
 	"background_page": "src/base_controller.html",
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
 	"default_icon": "src/images/logo-19.png",
 	"permissions": [
 	    "notifications",
