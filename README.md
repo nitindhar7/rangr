@@ -4,7 +4,7 @@
 ### OVERVIEW
 
 Rangr is a Google Chrome extension that pulls a users notification data from Forrst.com and presents it in the browser in a 
-soft, non-intrusive manner. Install Rangr from the [Chrome Web Store](https://chrome.google.com/webstore/category/home).
+soft, non-intrusive manner. Install Rangr from the [Chrome Web Store](https://chrome.google.com/webstore/detail/cfienghjhophncbiajglmgoekemphano).
 
 * * *
 
